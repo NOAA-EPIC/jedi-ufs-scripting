@@ -6,7 +6,7 @@ source ./util/ij-env.sh
 
 # Build the GW -----
 
-cd "${JU_CLONE_DIR}"/sorc
+cd "${IJ_CLONE_DIR}"/sorc
 ./build_all.sh all
 
 # Build all GDASApp executables (hack currently) -----

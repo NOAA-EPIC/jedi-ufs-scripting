@@ -6,7 +6,12 @@ set -xue
 
 source ./util/ij-env.sh
 
-git clone -b feature/JEDI-inline --recursive --jobs 8 https://github.com/NOAA-EPIC/global-workflow "${JU_CLONE_DIR}"
+if [ -d "${IJ_CLONE_DIR}" ]; then
+  echo "IJ_CLONE_DIR cannot exist! Please remove before cloning"
+  exit 1
+fi
+
+git clone -b feature/JEDI-inline --recursive --jobs 8 https://github.com/NOAA-EPIC/global-workflow "${IJ_CLONE_DIR}"
 
 # Set the appropriate WM hash to work with spack-stack 1.6.0 -----
 
