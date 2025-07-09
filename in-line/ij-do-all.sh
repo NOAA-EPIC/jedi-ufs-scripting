@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -xue
+set -xue -o pipefail
 
 if [[ ! -v SLURM_ACCOUNT ]]; then
   echo "ERROR: Please set SLURM_ACCOUNT, the account to use for running tests."
@@ -9,6 +9,6 @@ fi
 
 source ./util/ij-env.sh
 
-source ./ij-clone.sh # | tee out.ij-clone."${JU_SUFFIX}"
-source ./ij-build.sh | tee out.ij-build."${JU_SUFFIX}"
-source ./ij-test.sh | tee out.ij-test."${JU_SUFFIX}"
+source ./ij-clone.sh 2>&1 | tee out.ij-clone."${JU_SUFFIX}"
+source ./ij-build.sh 2>&1 | tee out.ij-build."${JU_SUFFIX}"
+source ./ij-test.sh 2>&1 | tee out.ij-test."${JU_SUFFIX}"
