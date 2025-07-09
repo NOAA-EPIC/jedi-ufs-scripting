@@ -2,6 +2,7 @@
 
 if [[ ! -v JU_CLONE_DIR ]]; then
   echo "Please set JU_CLONE_DIR, the target directory for the git clone of global-workflow"
+  exit 1
 fi
 
 _JU_GDAS_DIR=${JU_CLONE_DIR}/sorc/gdas.cd
