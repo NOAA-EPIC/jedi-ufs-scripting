@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-source ./ju-env.sh
-
 module purge
 
 # Used for final building of the GW
