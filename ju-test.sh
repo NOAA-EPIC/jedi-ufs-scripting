@@ -7,6 +7,7 @@ if [[ ! -v SLURM_ACCOUNT ]]; then
   exit 1
 fi
 
+source ./util/ju-env.sh
 source ./util/ju-load-modules.sh
 
 cd "${_JU_GDAS_DIR}"/build/fv3-jedi
