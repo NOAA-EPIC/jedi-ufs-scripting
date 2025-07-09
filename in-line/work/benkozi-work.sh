@@ -7,4 +7,4 @@ export SLURM_ACCOUNT=epic
 
 cd /scratch3/NCEPDEV/stmp/Benjamin.Koziol/sandbox/NOAA-EPIC/jedi-ufs-scripting/in-line
 
-./ij-do-all.sh
+source ./ij-do-all.sh
