@@ -9,6 +9,6 @@ fi
 
 source ./util/ij-env.sh
 
-bash ./ij-clone.sh 2>&1 | tee out.clone-jedi-ufs."${JU_SUFFIX}"
-bash ./ij-build.sh 2>&1 | tee out.build-jedi-ufs."${JU_SUFFIX}"
-bash ./ij-test.sh 2>&1 | tee out.test-jedi-ufs."${JU_SUFFIX}"
+bash ./ij-clone.sh 2>&1 | tee out.ij-clone."${JU_SUFFIX}"
+bash ./ij-build.sh 2>&1 | tee out.ij-build."${JU_SUFFIX}"
+bash ./ij-test.sh 2>&1 | tee out.ij-test."${JU_SUFFIX}"
