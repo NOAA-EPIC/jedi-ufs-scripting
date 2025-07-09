@@ -5,5 +5,7 @@ if [[ ! -v JU_CLONE_DIR ]]; then
   exit 1
 fi
 
+export JU_SUFFIX=${JU_SUFFIX:-$(date '+%Y%m%d-%H%M%S')}
+
 _JU_GDAS_DIR=${JU_CLONE_DIR}/sorc/gdas.cd
 _JU_UFS_TAG=1f0ab4322b0c81e48a0db5a202a427d374e29be0
