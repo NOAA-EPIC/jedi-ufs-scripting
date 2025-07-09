@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -xue
+set -xue -o pipefail
 
 if [[ ! -v SLURM_ACCOUNT ]]; then
   echo "ERROR: Please set SLURM_ACCOUNT, the account to use for running tests."

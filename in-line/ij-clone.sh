@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-set -xue
+set -xue -o pipefail
 
 source ./util/ij-env.sh
 
 if [ -d "${IJ_CLONE_DIR}" ]; then
-  echo "ERROR: IJ_CLONE_DIR cannot exist! Please remove before cloning"
+  echo "ERROR: IJ_CLONE_DIR=${IJ_CLONE_DIR} cannot exist! Please remove before cloning"
   exit 1
 fi
 

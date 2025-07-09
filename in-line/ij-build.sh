@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -xue
+set -xue -o pipefail
 
 source ./util/ij-env.sh
 
