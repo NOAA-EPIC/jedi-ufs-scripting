@@ -15,4 +15,4 @@ source ./util/ij-load-modules.sh
 
 cd "${_IJ_GDAS_DIR}"/build
 export LIBRARY_PATH=$LIBRARY_PATH:${netcdf_c_ROOT}/lib # hack for some builds (i.e. ioda)
-make -j 8 2>&1 | tee out.make-gdas.cd."${JU_SUFFIX}"
+make -j 8 2>&1 | tee out.make-gdas.cd."${IJ_SUFFIX}"
