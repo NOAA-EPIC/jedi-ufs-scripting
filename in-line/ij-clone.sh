@@ -5,7 +5,7 @@ set -xue
 source ./util/ij-env.sh
 
 if [ -d "${IJ_CLONE_DIR}" ]; then
-  echo "IJ_CLONE_DIR cannot exist! Please remove before cloning"
+  echo "ERROR: IJ_CLONE_DIR cannot exist! Please remove before cloning"
   exit 1
 fi
 
