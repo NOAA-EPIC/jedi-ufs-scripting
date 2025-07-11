@@ -13,6 +13,7 @@ cd ${_WD}
 
 cd "${_CNTL_CLONE_DIR}"
 readlink -f .
+ls -lht
 git apply ${_WD}/build_ufs.patch
 
 #cd "${_CNTL_CLONE_DIR}"/sorc
