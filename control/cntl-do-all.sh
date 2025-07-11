@@ -12,6 +12,7 @@ cd ${_WD}
 #git clone -b develop --recursive --jobs 8 https://github.com/NOAA-EMC/global-workflow "${_CNTL_CLONE_DIR}" 2>&1 | tee out.clone.${_CNTL_SUFFIX}
 
 cd "${_CNTL_CLONE_DIR}"
+readlink -f .
 git apply ${_WD}/build_ufs.patch
 
 #cd "${_CNTL_CLONE_DIR}"/sorc
