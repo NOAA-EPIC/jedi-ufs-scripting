@@ -9,7 +9,10 @@ _WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/sandbox/NOAA-EPIC/jedi-ufs-scripting/
 
 cd ${_WD}
 
-git clone -b develop --recursive --jobs 8 https://github.com/NOAA-EMC/global-workflow "${_CNTL_CLONE_DIR}" 2>&1 | tee out.clone.${_CNTL_SUFFIX}
+#git clone -b develop --recursive --jobs 8 https://github.com/NOAA-EMC/global-workflow "${_CNTL_CLONE_DIR}" 2>&1 | tee out.clone.${_CNTL_SUFFIX}
+
+cd "${_CNTL_CLONE_DIR}"
+git apply ${_WD}/build_ufs.patch
 
 #cd "${_CNTL_CLONE_DIR}"/sorc
 #./build_all.sh all
