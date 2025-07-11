@@ -17,4 +17,4 @@ cd ${_WD}
 #git apply ${_WD}/build_ufs.patch
 
 cd "${_CNTL_CLONE_DIR}"/sorc
-./build_all.sh all 2>&1 | tee "{$_WD}"/out.build."{$_CNTL_SUFFIX"
+./build_all.sh all 2>&1 | tee "${_WD}"/out.build."${_CNTL_SUFFIX}"
