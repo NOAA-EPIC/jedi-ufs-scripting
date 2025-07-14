@@ -8,6 +8,7 @@ source ./util/ij-env.sh
 
 cd "${IJ_CLONE_DIR}"/sorc
 ./build_all.sh all
+./link_workflow.sh
 
 # Build all GDASApp executables (hack currently) -----
 
