@@ -14,7 +14,7 @@ _UFS_HASH=9193010aa52f17a7b3618fd75b4e3c03a79c3c59
 cd ${_CLONE_DIR}/sorc/ufs_model.fd
 git fetch origin develop
 git checkout ${_UFS_HASH}
-git submodule update --init --recursive
+git submodule update --init --recursive --jobs 8
 
 #cd ${_CLONE_DIR}/sorc
 #echo "INFO: sorc build directory= $(readlink -f .)"
