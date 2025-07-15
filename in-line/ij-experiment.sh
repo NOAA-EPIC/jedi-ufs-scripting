@@ -25,3 +25,5 @@ cd ${IJ_CLONE_DIR}/dev/workflow
 #  --resensatmos 96 \
 #  --nens 4 \
 #  --icsdir /work/noaa/da/telless/data/ICs/2022010312_v17_C192C96_output_new/
+
+./setup_xml.py ${_WD}/exp/test_control
