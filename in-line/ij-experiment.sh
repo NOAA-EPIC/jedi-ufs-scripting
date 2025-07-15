@@ -3,7 +3,7 @@
 
 set -xue -o pipefail
 
-export ACCOUNT=epic
+export HPC_ACCOUNT=epic
 _WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/control
 export IJ_CLONE_DIR=${_WD}/global-workflow.20250711-1056
 
