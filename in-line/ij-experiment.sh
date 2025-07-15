@@ -10,7 +10,7 @@ _GWD=${_WD}/global-workflow.20250711-1056
 
 # C's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
 
-cd ${_GWD}/workflow
+cd ${_GWD}/dev/workflow
 ./setup_expt.py gfs forecast-only \
   --app ATM \
   --idate 2022010312 \
