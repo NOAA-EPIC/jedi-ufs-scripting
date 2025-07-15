@@ -18,7 +18,6 @@ cd ${IJ_CLONE_DIR}/dev/workflow
   --idate 2022010312 \
   --edate 2022010400 \
   --resdetatmos 48 \
-  --resensatmos 96 \
   --nens 4 \
   --pslot test_control \
   --configdir ${IJ_CLONE_DIR}/dev/parm/config \
