@@ -18,9 +18,10 @@ cd ${IJ_CLONE_DIR}/dev/workflow
   --idate 2022010312 \
   --edate 2022010400 \
   --resdetatmos 48 \
-  --nens 4 \
   --pslot test_control \
   --configdir ${IJ_CLONE_DIR}/dev/parm/config \
   --comroot ${_WD}/comroot \
   --expdir ${_WD}/exp
+#  --resensatmos 96 \
+#  --nens 4 \
 #  --icsdir /work/noaa/da/telless/data/ICs/2022010312_v17_C192C96_output_new/
