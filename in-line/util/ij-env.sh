@@ -6,7 +6,7 @@ if [[ ! -v IJ_CLONE_DIR ]]; then
 fi
 if [[ ! -v IJ_UFS_TAG ]]; then
   echo "WARNING: IJ_UFS_TAG=develop"
-  exit 1
+  export IJ_UFS_TAG=develop
 fi
 
 export IJ_SUFFIX=${IJ_SUFFIX:-$(date '+%Y%m%d-%H%M%S')}
