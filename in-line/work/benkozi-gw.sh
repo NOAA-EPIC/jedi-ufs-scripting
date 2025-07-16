@@ -10,13 +10,15 @@ _EXPTDIR=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/experiment/exp/t
 source ../../util/env.sh
 source ../../util/load-modules.sh
 
-#pushd ${_EXPTDIR}
+pushd ${_EXPTDIR}
 #rocotoboot -w test_control.xml -d test_control.db -t gdas_stage_ic -c 202201031200
 #rocotoboot -w test_control.xml -d test_control.db -t enkfgdas_stage_ic -c 202201031200
-#popd
-
-pushd ..
-bash ./ij-experiment.sh
+rocotoboot -w test_control.xml -d test_control.db -t gdas_fcst_seg0 -c 202201031200
+rocotoboot -w test_control.xml -d test_control.db -m enkfgdas_fcst -c 202201031200
 popd
+
+#pushd ..
+#bash ./ij-experiment.sh
+#popd
 
 ${_PYTHON} ../../util/submit_global_wflow.py ${_EXPTDIR}
