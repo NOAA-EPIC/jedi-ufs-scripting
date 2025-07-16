@@ -13,3 +13,11 @@ module load awscli-v2
 
 #module use -a /scratch2/NCEPDEV/nwprod/NCEPLIBS/modulefiles
 #module load prod_util
+
+#export HOMEgfs=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/experiment/global-workflow.20250711-1056
+#cd ${HOMEgfs}
+#source ./versions/run.hera.ver
+#source ./ush/detect_machine.sh
+#source ./ush/module-setup.sh
+#module use modulefiles
+#module load module_base.hera
