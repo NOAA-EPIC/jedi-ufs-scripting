@@ -1,0 +1,11 @@
+# User specific customizations for global-workflow
+# A value of 'default' will inherit from the host specific yaml
+# jinja templates are allowed, only os.environ is available for
+# realizing the templated variables
+user:
+  ACCOUNT: epic
+  HOMEDIR: /home/Benjamin.Koziol
+  STMP: /scratch3/NCEPDEV/stmp/Benjamin.Koziol/sandbox/stmp
+  PTMP: /scratch3/NCEPDEV/stmp/Benjamin.Koziol/sandbox/ptmp
+  NOSCRUB: 'default'
+  HPSS_PROJECT: epic
