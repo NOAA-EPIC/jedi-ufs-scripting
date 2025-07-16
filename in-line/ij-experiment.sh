@@ -23,8 +23,8 @@ cd ${GW_CLONE_DIR}/dev/workflow
   --comroot ${_WD}/comroot \
   --expdir ${_WD}/exp \
   --resensatmos 96 \
-  --nens 4 \
-  --icsdir /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/RUN/RUNDIRS/exp_psonly_4mem
+  --nens 4
+#  --icsdir /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/RUN/RUNDIRS/exp_psonly_4mem
 #  --icsdir /work/noaa/da/telless/data/ICs/2022010312_v17_C192C96_output_new/
 
 ./setup_xml.py ${_WD}/exp/test_control
