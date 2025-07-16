@@ -4,22 +4,22 @@
 set -xue -o pipefail
 
 export HPC_ACCOUNT=epic
-_WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/control
-export IJ_CLONE_DIR=${_WD}/global-workflow.20250711-1056
+_WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/experiment
+export GW_CLONE_DIR=${_WD}/global-workflow.20250711-1056
 
-source ./util/ij-env.sh
-source ./util/ij-load-modules.sh
+source ../util/env.sh
+source ../util/load-modules.sh
 
 # C's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
 
-cd ${IJ_CLONE_DIR}/dev/workflow
+cd ${GW_CLONE_DIR}/dev/workflow
 ./setup_expt.py gfs cycled \
   --app ATM \
   --idate 2022010312 \
   --edate 2022010400 \
   --resdetatmos 192 \
   --pslot test_control \
-  --configdir ${IJ_CLONE_DIR}/dev/parm/config/gfs \
+  --configdir ${GW_CLONE_DIR}/dev/parm/config/gfs \
   --comroot ${_WD}/comroot \
   --expdir ${_WD}/exp \
   --resensatmos 96 \

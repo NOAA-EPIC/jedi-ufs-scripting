@@ -6,7 +6,7 @@ Temporary repository for shared code (probably scripts) related to JEDI-UFS deve
 ## Environment Variables
 
 * Required:
-  * `IJ_CLONE_DIR` --> Target directory to clone the `global-workflow` (`git clone ... ${IJ_CLONE_DIR}`). Directory cannot exist.
+  * `GW_CLONE_DIR` --> Target directory to clone the `global-workflow` (`git clone ... ${GW_CLONE_DIR}`). Directory cannot exist.
   * `SLURM_ACCOUNT` --> _Required only if running tests._ This is the machine account to use for running `fv3-jedi` unit tests.
 * Optional
   * `IJ_SUFFIX` --> Optional suffix to apply to out files. If not provided, defaults to the system's current datetime.

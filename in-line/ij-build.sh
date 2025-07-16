@@ -2,17 +2,17 @@
 
 set -xue -o pipefail
 
-source ./util/ij-env.sh
+source ../util/env.sh
 
 # Build the GW -----
 
-cd "${IJ_CLONE_DIR}"/sorc
+cd "${GW_CLONE_DIR}"/sorc
 ./build_all.sh all
 ./link_workflow.sh
 
 # Build all GDASApp executables (hack currently) -----
 
-source ./util/ij-load-modules.sh
+source ../util/load-modules.sh
 
 cd "${_IJ_GDAS_DIR}"/build
 export LIBRARY_PATH=$LIBRARY_PATH:${netcdf_c_ROOT}/lib # hack for some builds (i.e. ioda)
