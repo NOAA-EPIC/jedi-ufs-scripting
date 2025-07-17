@@ -4,22 +4,26 @@
 set -xue -o pipefail
 
 export HPC_ACCOUNT=epic
-_WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/experiment
-export GW_CLONE_DIR=${_WD}/global-workflow.20250711-1056
+_WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/control-jedi_enkf_only
+export HOMEgfs=${_WD}/global-workflow.20250714-1506
 
-source ../util/env.sh
-source ../util/load-modules.sh
+cd ${HOMEgfs}
+source ./versions/run.hera.ver
+source ./ush/detect_machine.sh
+source ./ush/module-setup.sh
+module use modulefiles
+module load module_base.hera
 
 # C's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
 
-cd ${GW_CLONE_DIR}/dev/workflow
+cd ${HOMEgfs}/dev/workflow
 ./setup_expt.py gfs cycled \
   --app ATM \
   --idate 2022010312 \
   --edate 2022010400 \
   --resdetatmos 192 \
   --pslot test_control \
-  --configdir ${GW_CLONE_DIR}/dev/parm/config/gfs \
+  --configdir ${HOMEgfs}/dev/parm/config/gfs \
   --comroot ${_WD}/comroot \
   --expdir ${_WD}/exp \
   --resensatmos 96 \
