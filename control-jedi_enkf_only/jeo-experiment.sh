@@ -7,18 +7,18 @@ export HPC_ACCOUNT=epic
 _WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/control-jedi_enkf_only
 export HOMEgfs=${_WD}/global-workflow.20250714-1506
 
-#cd ${HOMEgfs}
-#source ./versions/run.hera.ver
-#source ./ush/detect_machine.sh
-#source ./ush/module-setup.sh
-#module use modulefiles
-#module load module_base.hera
-
-cd ${HOMEgfs}/sorc/gdas.cd
+cd ${HOMEgfs}
+source ./versions/run.hera.ver
 source ./ush/detect_machine.sh
 source ./ush/module-setup.sh
 module use modulefiles
-module load GDAS/hera.intel
+module load module_base.hera
+
+#cd ${HOMEgfs}/sorc/gdas.cd
+#source ./ush/detect_machine.sh
+#source ./ush/module-setup.sh
+#module use modulefiles
+#module load GDAS/hera.intel
 
 # C's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
 

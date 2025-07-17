@@ -3,13 +3,14 @@
 
 set -xue -o pipefail
 
-_CNTL_SUFFIX=20250711-1056
+_CNTL_SUFFIX=20250717-1520.ff5476b
 _CNTL_CLONE_DIR=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/control/global-workflow.${_CNTL_SUFFIX}
 _WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/sandbox/NOAA-EPIC/jedi-ufs-scripting/control
+_CNTL_BRANCH=ff5476b
 
 cd ${_WD}
 
-#git clone -b develop --recursive --jobs 8 https://github.com/NOAA-EMC/global-workflow "${_CNTL_CLONE_DIR}" 2>&1 | tee out.clone.${_CNTL_SUFFIX}
+git clone -b ${_CNTL_BRANCH} --recursive --jobs 8 https://github.com/NOAA-EMC/global-workflow "${_CNTL_CLONE_DIR}" 2>&1 | tee out.clone.${_CNTL_SUFFIX}
 
 #cd "${_CNTL_CLONE_DIR}"
 #readlink -f .
@@ -17,4 +18,4 @@ cd ${_WD}
 #git apply ${_WD}/build_ufs.patch
 
 cd "${_CNTL_CLONE_DIR}"/sorc
-./build_all.sh all 2>&1 | tee "${_WD}"/out.build."${_CNTL_SUFFIX}"
+./build_all.sh -a ATM all 2>&1 | tee "${_WD}"/out.build."${_CNTL_SUFFIX}"
