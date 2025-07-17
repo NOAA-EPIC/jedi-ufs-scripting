@@ -1,0 +1,13 @@
+diff --git a/ush/python/pygfs/task/atmens_analysis.py b/ush/python/pygfs/task/atmens_analysis.py
+index 4b2f8ebb..e2917391 100644
+--- a/ush/python/pygfs/task/atmens_analysis.py
++++ b/ush/python/pygfs/task/atmens_analysis.py
+@@ -147,7 +147,7 @@ class AtmEnsAnalysis(Task):
+         # extract bias corrections
+         tar_file = os.path.join(self.task_config.DATA, 'obs', f"{self.task_config.GPREFIX}{bias_file}")
+         logger.info(f"Extract bias correction files from {tar_file}")
+-        self.jedi.extract_tar(tar_file)
++        #self.jedi.extract_tar(tar_file) #CCT: Comment out to prvent errors in step "enkfgdas_atmensanlinit"
+
+         # stage CRTM fix files
+         logger.info(f"Staging CRTM fix files from {self.task_config.CRTM_FIX_YAML}")
