@@ -20,5 +20,5 @@ git submodule update --init --recursive --jobs 8
 #ls -lht
 #git apply ${_WD}/build_ufs.patch
 
-cd "${_CNTL_CLONE_DIR}"/sorc
-./build_all.sh -a ATM all 2>&1 | tee "${_WD}"/out.build."${_CNTL_SUFFIX}"
+#cd "${_CNTL_CLONE_DIR}"/sorc
+#./build_all.sh -a ATM all 2>&1 | tee "${_WD}"/out.build."${_CNTL_SUFFIX}"
