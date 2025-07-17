@@ -16,14 +16,14 @@ module load module_base.hera
 
 # C's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
 
-cd ${HOMEgfs}/dev/workflow
+cd ${HOMEgfs}/workflow
 ./setup_expt.py gfs cycled \
   --app ATM \
   --idate 2022010312 \
   --edate 2022010400 \
   --resdetatmos 192 \
   --pslot test_control \
-  --configdir ${HOMEgfs}/dev/parm/config/gfs \
+  --configdir ${HOMEgfs}/parm/config/gfs \
   --comroot ${_WD}/comroot \
   --expdir ${_WD}/exp \
   --resensatmos 96 \
