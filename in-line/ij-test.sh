@@ -7,8 +7,8 @@ if [[ ! -v SLURM_ACCOUNT ]]; then
   exit 1
 fi
 
-source ../util/env.sh
-source ../util/load-modules.sh
+source ./util/env.sh
+source ./util/load-modules.sh
 
 cd "${_IJ_GDAS_DIR}"/build/fv3-jedi
 

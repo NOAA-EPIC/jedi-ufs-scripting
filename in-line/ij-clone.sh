@@ -2,7 +2,7 @@
 
 set -xue -o pipefail
 
-source ../util/env.sh
+source ./util/env.sh
 
 if [ -d "${GW_CLONE_DIR}" ]; then
   echo "ERROR: GW_CLONE_DIR=${GW_CLONE_DIR} cannot exist! Please remove before cloning"

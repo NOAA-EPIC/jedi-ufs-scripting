@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# NOTE! - THIS IS A WORK-IN-PROGRESS.
 
 set -xue -o pipefail
 
@@ -7,10 +8,10 @@ export HPC_ACCOUNT=epic
 _WD=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/experiment
 export GW_CLONE_DIR=${_WD}/global-workflow.20250711-1056
 
-source ../util/env.sh
-source ../util/load-modules.sh
+source ./util/env.sh
+source ./util/load-modules.sh
 
-# C's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
+# Chong-Chi's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
 
 cd ${GW_CLONE_DIR}/dev/workflow
 ./setup_expt.py gfs cycled \
@@ -24,7 +25,7 @@ cd ${GW_CLONE_DIR}/dev/workflow
   --expdir ${_WD}/exp \
   --resensatmos 96 \
   --nens 4 \
-  --icsdir /scratch2/BMC/gsienkf/cctong/ICs/2022010312_v17_C192C96_output_new/
-#  --icsdir /work/noaa/da/telless/data/ICs/2022010312_v17_C192C96_output_new/
+  --icsdir /scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/ICs/2022010312_v17_C192C96_output_new
+#  --icsdir /work/noaa/da/telless/data/ICs/2022010312_v17_C192C96_output_new/ # Chong-Chi's original stage
 
 ./setup_xml.py ${_WD}/exp/test_control

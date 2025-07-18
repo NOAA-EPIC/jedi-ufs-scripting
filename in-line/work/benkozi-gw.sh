@@ -7,8 +7,8 @@ export GW_CLONE_DIR=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/exper
 _PYTHON=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/sandbox/miniconda3/envs/benkozi-work/bin/python3.13
 _EXPTDIR=/scratch3/NCEPDEV/stmp/Benjamin.Koziol/inline-jedi-ufs/experiment/exp/test_control
 
-source ../../util/env.sh
-source ../../util/load-modules.sh
+source ../util/env.sh
+source ../util/load-modules.sh
 
 pushd ${_EXPTDIR}
 #rocotoboot -w test_control.xml -d test_control.db -t gdas_stage_ic -c 202201031200
@@ -23,4 +23,4 @@ popd
 #bash ./ij-experiment.sh
 #popd
 
-${_PYTHON} ../../util/submit_global_wflow.py ${_EXPTDIR}
+${_PYTHON} ./submit_global_wflow.py ${_EXPTDIR}

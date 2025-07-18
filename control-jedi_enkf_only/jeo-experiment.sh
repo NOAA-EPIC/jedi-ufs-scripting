@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# NOTE! - THIS IS A WORK-IN-PROGRESS.
 
 set -xue -o pipefail
 
@@ -13,12 +14,6 @@ source ./ush/detect_machine.sh
 source ./ush/module-setup.sh
 module use modulefiles
 module load module_base.hera
-
-#cd ${HOMEgfs}/sorc/gdas.cd
-#source ./ush/detect_machine.sh
-#source ./ush/module-setup.sh
-#module use modulefiles
-#module load GDAS/hera.intel
 
 # C's experiment configuration: /scratch2/BMC/gsienkf/cctong/exp_psonly_4mem/exp/exp_psonly_4mem
 
