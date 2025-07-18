@@ -1,0 +1,66 @@
+diff --git a/parm/atm/jcb-prototype_lgetkf_observer.yaml.j2 b/parm/atm/jcb-prototype_lgetkf_observer.yaml.j2
+index 26654b1..a43ae0b 100644
+--- a/parm/atm/jcb-prototype_lgetkf_observer.yaml.j2
++++ b/parm/atm/jcb-prototype_lgetkf_observer.yaml.j2
+@@ -17,21 +17,21 @@ observations:
+ #  - ADPSFC
+ #  - ADPUPA
+ #  - SFCSHP
+-  - aircraft
+-  - ascatw.ascat_metop-b
++#  - aircraft
++#  - ascatw.ascat_metop-b
+ #  - ascatw.ascat_metop-c
+-  - atms_n20
++#  - atms_n20
+ #  - atms_npp
+   - conventional_ps
+-  - gnssro
++#  - gnssro
+ #  - gpsro
+ #  - mtiasi_metop-a
+ #  - mtiasi_metop-b
+ #  - ompsnp_n20
+-  - ompsnp_npp
++#  - ompsnp_npp
+ #  - ompstc_n20
+-  - ompstc_npp
+-  - satwnd.abi_goes-16
++#  - ompstc_npp
++#  - satwnd.abi_goes-16
+ #  - satwnd.abi_goes-18
+ #  - satwnd.leogeo_multi
+ #  - satwnd.viirs_n20
+diff --git a/parm/atm/jcb-prototype_lgetkf_solver.yaml.j2 b/parm/atm/jcb-prototype_lgetkf_solver.yaml.j2
+index 6779341..ff1a10c 100644
+--- a/parm/atm/jcb-prototype_lgetkf_solver.yaml.j2
++++ b/parm/atm/jcb-prototype_lgetkf_solver.yaml.j2
+@@ -17,21 +17,21 @@ observations:
+ #  - ADPSFC
+ #  - ADPUPA
+ #  - SFCSHP
+-  - aircraft
+-  - ascatw.ascat_metop-b
++#  - aircraft
++#  - ascatw.ascat_metop-b
+ #  - ascatw.ascat_metop-c
+-  - atms_n20
++#  - atms_n20
+ #  - atms_npp
+   - conventional_ps
+-  - gnssro
++#  - gnssro
+ #  - gpsro
+ #  - mtiasi_metop-a
+ #  - mtiasi_metop-b
+ #  - ompsnp_n20
+-  - ompsnp_npp
++#  - ompsnp_npp
+ #  - ompstc_n20
+-  - ompstc_npp
+-  - satwnd.abi_goes-16
++#  - ompstc_npp
++#  - satwnd.abi_goes-16
+ #  - satwnd.abi_goes-18
+ #  - satwnd.leogeo_multi
+ #  - satwnd.viirs_n20

@@ -1,0 +1,15 @@
+name: jedi-ufs-scripting
+channels:
+  - conda-forge
+dependencies:
+  - pydantic
+  - typer
+  - mypy
+  - black
+  - pytest
+  - pytest-mock
+  - pyyaml
+  - jinja2
+  - deepdiff
+  - pip:
+      - python-ulid[pydantic]

@@ -7,7 +7,7 @@ if [[ ! -v SLURM_ACCOUNT ]]; then
   exit 1
 fi
 
-source ./util/ij-env.sh
+source ./util/env.sh
 
 source ./ij-clone.sh 2>&1 | tee out.ij-clone."${IJ_SUFFIX}"
 source ./ij-build.sh 2>&1 | tee out.ij-build."${IJ_SUFFIX}"

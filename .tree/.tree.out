@@ -1,0 +1,34 @@
+.
+├── Dockerfile
+├── README.md
+├── control
+│   └── cntl-build.sh
+├── control-jedi_enkf_only
+│   ├── changed-files
+│   │   ├── atmens_analysis.py
+│   │   ├── jcb-prototype_lgetkf_observer.yaml.j2
+│   │   └── jcb-prototype_lgetkf_solver.yaml.j2
+│   ├── jeo-build.sh
+│   ├── jeo-experiment.sh
+│   └── patch
+│       ├── gdas_cd.patch
+│       ├── global-workflow.patch
+│       └── travis-elless.patch
+├── environment.yml
+└── in-line
+    ├── ij-build.sh
+    ├── ij-clone.sh
+    ├── ij-do-all.sh
+    ├── ij-experiment.sh
+    ├── ij-test.sh
+    ├── util
+    │   ├── env.sh
+    │   └── load-modules.sh
+    └── work
+        ├── benkozi-gw.sh
+        ├── benkozi-work.sh
+        ├── gw-HERA.env.patch
+        ├── gwrc
+        └── submit_global_wflow.py
+
+8 directories, 24 files

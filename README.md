@@ -1,29 +1,62 @@
 # jedi-ufs-scripting
-Temporary repository for shared code (probably scripts) related to JEDI-UFS development.
+Temporary repository for shared code related to JEDI-UFS/in-line JEDI development.
 
-# In-Line JEDI-UFS
+See this [evolving doc](https://docs.google.com/document/d/1un1u4l-dzZqo6P_q9k7OE5-2GZD9_l-nurf3KnEOjJk/edit?tab=t.0) for more background information on in-line JEDI development.
 
-## Environment Variables
-
-* Required:
-  * `IJ_CLONE_DIR` --> Target directory to clone the `global-workflow` (`git clone ... ${IJ_CLONE_DIR}`). Directory cannot exist.
-  * `SLURM_ACCOUNT` --> _Required only if running tests._ This is the machine account to use for running `fv3-jedi` unit tests.
-* Optional
-  * `IJ_SUFFIX` --> Optional suffix to apply to out files. If not provided, defaults to the system's current datetime.
-
-## Contents Description
-
-* `./in-line/util` --> Support scripts (env, modules, etc.)
-* `./in-line/work` --> Space for work scripts - can be messy
-  * See `./in-line/work/benkozi-work.sh` for a full usage example.
-* `./in-line/ij-clone.sh` --> Clone the `global-workflow` and perform any post-processing on the repository contents.
-* `./in-line/ij-build.sh` --> Build the `global-workflow` and in-line associated executables.
-* `./in-line/ij-test.sh` --> Run tests associated with in-line coupling and FV3-JEDI.
-* `./in-line/ij-do-all.sh` --> Run clone, build, and test in sequence (for convenience).
-
-## Example
+# File structure overview
 
 ```shell
-cd jedi-ufs-scripting/in-line
-bash ij-do-all.sh
+.
+├── Dockerfile
+├── README.md
+# Build the control GW based on a more recent version of NOAA-EMC's GW. The WM hash matches that of the letkf build.
+├── control
+│   └── cntl-build.sh
+# Build the control GW based on the EnKF-only and work from Travis Elless. This GW is out-of-date and will likely not be used as the control. 
+├── control-jedi_enkf_only
+# There are updated versions of files used to assimilate only pressure.
+│   ├── changed-files
+│   │   ├── atmens_analysis.py
+│   │   ├── jcb-prototype_lgetkf_observer.yaml.j2
+│   │   └── jcb-prototype_lgetkf_solver.yaml.j2
+# Build the EnKF-only GW.
+│   ├── jeo-build.sh
+# Setup the EnKF-only experiment.
+│   ├── jeo-experiment.sh
+# These are patches needed to compile the EnKF-only workflow with an updated WM and apply changes necessary for pressure-only assimilation.
+│   └── patch
+│       ├── gdas_cd.patch
+│       ├── global-workflow.patch
+│       └── travis-elless.patch
+├── environment.yml
+# Scripts associated with the in-line JEDI experiment.
+└── in-line
+# Build the in-line GW and associated executables.
+    ├── ij-build.sh
+# Clone and update the codebase for the build.
+    ├── ij-clone.sh
+# Build + clone + test convenience script.
+    ├── ij-do-all.sh
+# Setup a GW experiment.
+    ├── ij-experiment.sh
+# Run ctests associated with fv3-jedi and in-line.
+    ├── ij-test.sh
+# Common utilities used by the in-line scripts.
+    ├── util
+    │   ├── env.sh
+    │   └── load-modules.sh
+    └── work
+# Run the GW experiment.
+        ├── benkozi-gw.sh
+# ...nothing special...
+        ├── benkozi-work.sh
+# Patches the hera environment for finding Python packages. May not be necessary.
+        ├── gw-HERA.env.patch
+# Example .gwrc used by benkozi
+        ├── gwrc
+# Helper Python script that uses rocoto outside of cron
+        └── submit_global_wflow.py
+
+8 directories, 24 files
+
 ```
