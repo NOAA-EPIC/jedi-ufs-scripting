@@ -6,11 +6,12 @@ source ./util/env.sh
 
 # Build the GW -----
 
-cd "${GW_CLONE_DIR}"/sorc
-# JEDI-UFS only supports the atmospheric component. The WM build used by the letkf executable is
-# built by fv3-jedi, but it's good to keep it consistent in case the WM is run via the GW.
-./build_all.sh -a ATM all
-./link_workflow.sh
+#pushd "${GW_CLONE_DIR}"/sorc
+## JEDI-UFS only supports the atmospheric component. The WM build used by the letkf executable is
+## built by fv3-jedi, but it's good to keep it consistent in case the WM is run via the GW.
+#./build_all.sh -a ATM all
+#./link_workflow.sh
+#popd
 
 # Build all GDASApp executables (hack currently) -----
 
